@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block head %}
+    
+{% endblock %}
+
+{% block body %}
+    
+
+        <center>
+            <h1>Sentiment Analysis App</h1>
+            <h2>باللغة العربية</h2>
+        <form class="border border-success p-2 mb-2" action="/predict" method="post">
+            <label for="input">قم بادخال نص التويتة:</label>
+            <br><br>
+            <input class="form-control" type="text" id="tweet" name="tweet" required>
+            <br>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        </center>
+    
+        {% endblock %}

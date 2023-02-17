@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% block head %}
+    
+{% endblock %}
+
+    
+<body>
+    {% block body %}
+
+    <h1>Sentiment Analysis Result</h1>
+    <b>{{tweet}}</b>
+    <br><br><br>
+    Decision trees
+
+    {% if dt_prediction == 'pos' %}
+        <p>The sentiment of the tweet is <i class="badge bg-primary text-wrap">Positive</i>.</p>
+    {% else %}
+        <p>The sentiment of the tweet is <i class="badge bg-danger text-wrap">Negative</i>.</p>
+    {% endif %}
+    <br><br>
+    Random Forests
+    {% if rf_prediction == 'pos' %}
+        <p>The sentiment of the tweet is <i class="badge bg-primary text-wrap">Positive</i>.</p>
+    {% else %}
+        <p>The sentiment of the tweet is <i class="badge bg-danger text-wrap">Negative</i>.</p>
+    {% endif %}
+    <br><br>
+    Naïve Bayes
+    {% if nb_prediction == 'pos' %}
+        <p>The sentiment of the tweet is <i class="badge bg-primary text-wrap">Positive</i> .</p>
+    {% else %}
+        <p>The sentiment of the tweet is <i class="badge bg-danger text-wrap">Negative</i>.</p>
+    {% endif %}
+    <a class="btn btn-secondary" href="/">Back to Home</a>
+
+    {% endblock %}
+
+
